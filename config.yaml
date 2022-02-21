@@ -3,15 +3,16 @@ languageCode: en-us
 title: Le blog de Poulpix
 theme: hugo-PaperMod
 
+googleAnalytics: G-9P0BJNQQ6S
+
 params:
   homeInfoParams:
     Title: "Tech / DevOps / SRE Blog"
     Content: |
       Welcome to Poulpix's Blog
+      
   socialIcons:
     - name: "twitter"
       url: "https://twitter.com/Poulpix"
     - name: "linkedin"
       url: "https://www.linkedin.com/in/valentin-scotte-832b3a65/"
-
-googleAnalytics: G-9P0BJNQQ6S
