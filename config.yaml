@@ -1,0 +1,15 @@
+baseURL: "http://blog.poulpix.fr/"
+languageCode: en-us
+title: Le blog de Poulpix
+theme: hugo-PaperMod
+
+params:
+  homeInfoParams:
+    Title: "Blog Tech / DevOps / SRE"
+    Content: |
+      Welcome to Poulpix's Blog
+  socialIcons:
+    - name: "twitter"
+      url: "https://twitter.com/Poulpix"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/valentin-scotte-832b3a65/"
