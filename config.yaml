@@ -13,3 +13,5 @@ params:
       url: "https://twitter.com/Poulpix"
     - name: "linkedin"
       url: "https://www.linkedin.com/in/valentin-scotte-832b3a65/"
+
+googleAnalytics: G-9P0BJNQQ6S
