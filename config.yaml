@@ -5,7 +5,7 @@ theme: hugo-PaperMod
 
 params:
   homeInfoParams:
-    Title: "Blog Tech / DevOps / SRE"
+    Title: "Tech / DevOps / SRE Blog"
     Content: |
       Welcome to Poulpix's Blog
   socialIcons:
