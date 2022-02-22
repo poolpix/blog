@@ -1,15 +1,15 @@
 baseURL: "http://blog.poulpix.fr/"
 languageCode: en-us
-title: Le blog de Poulpix
+title: Poulpix's Blog
 theme: hugo-PaperMod
 
 googleAnalytics: G-9P0BJNQQ6S
 
 params:
   homeInfoParams:
-    Title: "Tech / DevOps / SRE Blog"
+    Title: "Welcome to my web home !"
     Content: |
-      Welcome to Poulpix's Blog
+      Tech / DevOps / SRE Blog
       
   socialIcons:
     - name: "twitter"
