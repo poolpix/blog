@@ -1,7 +1,7 @@
 ---
 title: "Hosting"
 date: 2022-02-22T09:54:22+01:00
-draft: true
+draft: false
 ---
 
 As it's a tech blog, let's first have a look at the hosting stack !
