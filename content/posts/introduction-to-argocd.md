@@ -63,8 +63,7 @@ example, using Helm:
    The default admin password is stored in a Kubernetes secret. You can retrieve it
 using:
    ```bash
-   kubectl -n argocd get secret argocd-initial-admin-secret -o
-jsonpath="{.data.password}" | base64 -d
+   kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
    ```
 
 3. **Adding Applications**: In the ArgoCD UI, you can add new applications by
