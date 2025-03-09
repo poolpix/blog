@@ -1,7 +1,7 @@
 ---
 title: "Terraform : Understanding state, state lock and backend"
 date: 2025-03-09T11:44:50+01:00
-draft: true
+draft: false
 ---
  # Understanding Terraform State, State Lock, and Backends
 
