@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Introduction to Argocd | Poulpix&#39;s Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution
@@ -20,16 +20,16 @@ as the single source of truth. This approach ensures that the desired state of y
 environment is continuously reconciled with the actual state, reducing operational
 overhead and increasing deployment reliability.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/introduction-to-argocd/">
+<link rel="canonical" href="https://blog.poulpix.fr/posts/introduction-to-argocd/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://blog.poulpix.fr/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.poulpix.fr/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.poulpix.fr/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.poulpix.fr/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.poulpix.fr/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/introduction-to-argocd/">
+<link rel="alternate" hreflang="en" href="https://blog.poulpix.fr/posts/introduction-to-argocd/">
 <noscript>
     <style>
         #theme-toggle,
@@ -67,6 +67,94 @@ overhead and increasing deployment reliability.">
 
     </style>
 </noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9P0BJNQQ6S"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9P0BJNQQ6S');
+        }
+      </script><meta property="og:url" content="https://blog.poulpix.fr/posts/introduction-to-argocd/">
+  <meta property="og:site_name" content="Poulpix&#39;s Blog">
+  <meta property="og:title" content="Introduction to Argocd">
+  <meta property="og:description" content="Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution In the rapidly evolving world of cloud-native computing, managing containerized applications in environments like Kubernetes has become increasingly complex. Organizations need robust tools that facilitate seamless deployment, version control, and collaboration between development teams. One such tool that has gained significant traction is ArgoCD, an open-source continuous delivery (CD) tool for Kubernetes.
+What is ArgoCD? ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes applications. It enables you to manage your application state by using Git repositories as the single source of truth. This approach ensures that the desired state of your environment is continuously reconciled with the actual state, reducing operational overhead and increasing deployment reliability.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-09T10:50:22+01:00">
+    <meta property="article:modified_time" content="2025-03-09T10:50:22+01:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction to Argocd">
+<meta name="twitter:description" content="Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution
+In the rapidly evolving world of cloud-native computing, managing containerized
+applications in environments like Kubernetes has become increasingly complex.
+Organizations need robust tools that facilitate seamless deployment, version control,
+and collaboration between development teams. One such tool that has gained significant
+traction is ArgoCD, an open-source continuous delivery (CD) tool for Kubernetes.
+What is ArgoCD?
+ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes
+applications. It enables you to manage your application state by using Git repositories
+as the single source of truth. This approach ensures that the desired state of your
+environment is continuously reconciled with the actual state, reducing operational
+overhead and increasing deployment reliability.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.poulpix.fr/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Introduction to Argocd",
+      "item": "https://blog.poulpix.fr/posts/introduction-to-argocd/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Introduction to Argocd",
+  "name": "Introduction to Argocd",
+  "description": "Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution In the rapidly evolving world of cloud-native computing, managing containerized applications in environments like Kubernetes has become increasingly complex. Organizations need robust tools that facilitate seamless deployment, version control, and collaboration between development teams. One such tool that has gained significant traction is ArgoCD, an open-source continuous delivery (CD) tool for Kubernetes.\nWhat is ArgoCD? ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes applications. It enables you to manage your application state by using Git repositories as the single source of truth. This approach ensures that the desired state of your environment is continuously reconciled with the actual state, reducing operational overhead and increasing deployment reliability.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution In the rapidly evolving world of cloud-native computing, managing containerized applications in environments like Kubernetes has become increasingly complex. Organizations need robust tools that facilitate seamless deployment, version control, and collaboration between development teams. One such tool that has gained significant traction is ArgoCD, an open-source continuous delivery (CD) tool for Kubernetes.\nWhat is ArgoCD? ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes applications. It enables you to manage your application state by using Git repositories as the single source of truth. This approach ensures that the desired state of your environment is continuously reconciled with the actual state, reducing operational overhead and increasing deployment reliability.\nKey Features of ArgoCD Declarative Application Management: ArgoCD allows you to define applications in a declarative manner using YAML manifests stored in Git repositories. This makes it easy to manage and audit changes to your application configurations.\nSync and Rollback Mechanisms: ArgoCD provides robust mechanisms for synchronizing desired states with actual states. If there are discrepancies, the tool automatically syncs the environments. Additionally, ArgoCD supports rollbacks, allowing teams to revert to previous stable versions quickly in case of issues.\nGitOps Workflow: By using Git as the source of truth, ArgoCD facilitates a GitOps workflow. This means that all changes to your application are managed through pull requests and commits, ensuring consistency and traceability across environments.\nMulti-Cluster Support: Argocd can manage applications across multiple Kubernetes clusters. This is particularly useful for organizations with complex multi-cloud or hybrid cloud architectures, enabling centralized management of deployments.\nAutomated Application Management: ArgoCD can automatically detect changes in the Git repository and trigger updates to the target cluster. This automation streamlines the deployment process and minimizes human intervention.\nGetting Started with ArgoCD Setting up ArgoCD involves several steps:\nInstallation: You can install ArgoCD using Helm charts or kubectl commands. For example, using Helm:\nhelm repo add argo https://argoproj.github.io/argo-helm helm repo update helm install argocd argo/argo-cd Accessing the UI: After installation, you can access the ArgoCD user interface (UI) via a port-forward:\nkubectl port-forward svc/argocd-server -n argocd 8080:443 The default admin password is stored in a Kubernetes secret. You can retrieve it using:\nkubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath=\"{.data.password}\" | base64 -d\n3. **Adding Applications**: In the ArgoCD UI, you can add new applications by specifying the Git repository containing your Kubernetes manifests and the path to those manifests. ### Conclusion ArgoCD is a powerful tool for managing Kubernetes applications with a focus on simplicity, automation, and consistency. Its integration with GitOps principles makes it an ideal choice for organizations looking to streamline their deployment processes and ensure reliable application delivery. Whether you're managing a single cluster or multiple clusters across different environments, ArgoCD offers a scalable solution that enhances collaboration and operational efficiency. As the Kubernetes ecosystem continues to evolve, tools like ArgoCD play a crucial role in helping teams achieve more efficient and reliable deployments. If you're looking to enhance your Kubernetes management practices, exploring ArgoCD could be a valuable step forward. ",
+  "wordCount" : "506",
+  "inLanguage": "en",
+  "datePublished": "2025-03-09T10:50:22+01:00",
+  "dateModified": "2025-03-09T10:50:22+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.poulpix.fr/posts/introduction-to-argocd/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Poulpix's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.poulpix.fr/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -84,7 +172,7 @@ overhead and increasing deployment reliability.">
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Poulpix&#39;s Blog (Alt + H)">Poulpix&#39;s Blog</a>
+            <a href="https://blog.poulpix.fr/" accesskey="h" title="Poulpix&#39;s Blog (Alt + H)">Poulpix&#39;s Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -119,12 +207,6 @@ overhead and increasing deployment reliability.">
     
     <h1 class="post-title entry-hint-parent">
       Introduction to Argocd
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
     </h1>
     <div class="post-meta"><span title='2025-03-09 10:50:22 +0100 CET'>March 9, 2025</span>
 
@@ -221,7 +303,7 @@ forward.
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Poulpix&#39;s Blog</a></span> · 
+        <span>&copy; 2025 <a href="https://blog.poulpix.fr/">Poulpix&#39;s Blog</a></span> · 
 
     <span>
         Powered by

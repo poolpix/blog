@@ -2,20 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://blog.poulpix.fr/posts/</loc>
+    <loc>https://blog.poulpix.fr/posts/introduction-to-argocd/</loc>
     <lastmod>2025-03-09T10:50:22+01:00</lastmod>
   </url><url>
-    <loc>http://blog.poulpix.fr/</loc>
+    <loc>https://blog.poulpix.fr/posts/</loc>
     <lastmod>2025-03-09T10:50:22+01:00</lastmod>
   </url><url>
-    <loc>http://blog.poulpix.fr/posts/hosting/</loc>
+    <loc>https://blog.poulpix.fr/</loc>
+    <lastmod>2025-03-09T10:50:22+01:00</lastmod>
+  </url><url>
+    <loc>https://blog.poulpix.fr/posts/hosting/</loc>
     <lastmod>2022-02-22T09:54:22+01:00</lastmod>
   </url><url>
-    <loc>http://blog.poulpix.fr/posts/introduction/</loc>
+    <loc>https://blog.poulpix.fr/posts/introduction/</loc>
     <lastmod>2022-02-21T10:02:48+01:00</lastmod>
   </url><url>
-    <loc>http://blog.poulpix.fr/categories/</loc>
+    <loc>https://blog.poulpix.fr/categories/</loc>
   </url><url>
-    <loc>http://blog.poulpix.fr/tags/</loc>
+    <loc>https://blog.poulpix.fr/tags/</loc>
   </url>
 </urlset>

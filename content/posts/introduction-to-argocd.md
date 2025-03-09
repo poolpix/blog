@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Argocd"
 date: 2025-03-09T10:50:22+01:00
-draft: true
+draft: false
 ---
 
 ### Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution

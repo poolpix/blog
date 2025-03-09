@@ -2,17 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Poulpix&#39;s Blog</title>
-    <link>http://blog.poulpix.fr/</link>
+    <link>https://blog.poulpix.fr/</link>
     <description>Recent content on Poulpix&#39;s Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Feb 2022 09:54:22 +0100</lastBuildDate>
-    <atom:link href="http://blog.poulpix.fr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Mar 2025 10:50:22 +0100</lastBuildDate>
+    <atom:link href="https://blog.poulpix.fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Argocd</title>
+      <link>https://blog.poulpix.fr/posts/introduction-to-argocd/</link>
+      <pubDate>Sun, 09 Mar 2025 10:50:22 +0100</pubDate>
+      <guid>https://blog.poulpix.fr/posts/introduction-to-argocd/</guid>
+      <description>&lt;h3 id=&#34;introduction-to-argocd-your-kubernetes-application-deployment-orchestration-solution&#34;&gt;Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution&lt;/h3&gt;
+&lt;p&gt;In the rapidly evolving world of cloud-native computing, managing containerized
+applications in environments like Kubernetes has become increasingly complex.
+Organizations need robust tools that facilitate seamless deployment, version control,
+and collaboration between development teams. One such tool that has gained significant
+traction is &lt;strong&gt;ArgoCD&lt;/strong&gt;, an open-source continuous delivery (CD) tool for Kubernetes.&lt;/p&gt;
+&lt;h3 id=&#34;what-is-argocd&#34;&gt;What is ArgoCD?&lt;/h3&gt;
+&lt;p&gt;ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes
+applications. It enables you to manage your application state by using Git repositories
+as the single source of truth. This approach ensures that the desired state of your
+environment is continuously reconciled with the actual state, reducing operational
+overhead and increasing deployment reliability.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hosting</title>
-      <link>http://blog.poulpix.fr/posts/hosting/</link>
+      <link>https://blog.poulpix.fr/posts/hosting/</link>
       <pubDate>Tue, 22 Feb 2022 09:54:22 +0100</pubDate>
-      <guid>http://blog.poulpix.fr/posts/hosting/</guid>
+      <guid>https://blog.poulpix.fr/posts/hosting/</guid>
       <description>&lt;p&gt;As it&amp;rsquo;s a tech blog, let&amp;rsquo;s first have a look at the hosting stack !&lt;/p&gt;
 &lt;p&gt;You may be disappointed, no big deal here.&lt;/p&gt;
 &lt;p&gt;This blog is hosted on GitHub Pages, the free static hosting solution from GitHub. I am using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, a static blog engine. If you don&amp;rsquo;t know it, have a look, it&amp;rsquo;s awesome ! No need for SQL server, or backend server (php or others).&lt;/p&gt;
@@ -20,9 +38,9 @@
     </item>
     <item>
       <title>Introduction</title>
-      <link>http://blog.poulpix.fr/posts/introduction/</link>
+      <link>https://blog.poulpix.fr/posts/introduction/</link>
       <pubDate>Mon, 21 Feb 2022 10:02:48 +0100</pubDate>
-      <guid>http://blog.poulpix.fr/posts/introduction/</guid>
+      <guid>https://blog.poulpix.fr/posts/introduction/</guid>
       <description>&lt;p&gt;Welcome to Poulpix&amp;rsquo;s Blog !&lt;/p&gt;
 &lt;p&gt;I am Valentin, currently working as a &amp;ldquo;DevOps&amp;rdquo;. It&amp;rsquo;s a very common word in the IT world now, it should represent a whole philosophy of integration between Dev teams and Ops teams, but as a job it&amp;rsquo;s actually more about modern System Administration, with Cloud part, CDN part, CI/CD part, observability part.&lt;/p&gt;
 &lt;p&gt;On this blog I will share interesting news (DevOps, Site Reliability Engineering, Systems Administration), or some cool tasks from my working environment (currently web), that could help mates.&lt;/p&gt;</description>
