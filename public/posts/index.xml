@@ -6,8 +6,21 @@
     <description>Recent content in Posts on Poulpix&#39;s Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Mar 2025 10:50:22 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 09 Mar 2025 11:44:50 +0100</lastBuildDate>
     <atom:link href="https://blog.poulpix.fr/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraform : Understanding state, state lock and backend</title>
+      <link>https://blog.poulpix.fr/posts/terraform-state-and-backend/</link>
+      <pubDate>Sun, 09 Mar 2025 11:44:50 +0100</pubDate>
+      <guid>https://blog.poulpix.fr/posts/terraform-state-and-backend/</guid>
+      <description>&lt;h1 id=&#34;understanding-terraform-state-state-lock-and-backends&#34;&gt;Understanding Terraform State, State Lock, and Backends&lt;/h1&gt;
+&lt;p&gt;As an SRE or DevOps engineer working in a tech environment, you&amp;rsquo;ve likely encountered
+Terraform - the open-source Infrastructure as Code (IaC) software tool. One critical
+aspect of Terraform is its state management mechanism that enables you to track and
+manage infrastructure resources effectively. This blog post delves into the concepts of
+Terraform state, state locking, and backends to help you understand their significance
+and usage in real-world scenarios.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Introduction to Argocd</title>
       <link>https://blog.poulpix.fr/posts/introduction-to-argocd/</link>
