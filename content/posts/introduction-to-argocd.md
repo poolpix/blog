@@ -4,12 +4,6 @@ date: 2025-03-09T10:50:22+01:00
 draft: true
 ---
 
----
-title: "Introduction"
-date: 2025-03-09T10:34:48+01:00
-draft: false
----
-
 ### Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution
 
 In the rapidly evolving world of cloud-native computing, managing containerized
