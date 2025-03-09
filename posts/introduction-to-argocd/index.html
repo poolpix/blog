@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Introduction to Argocd | Poulpix&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution
+In the rapidly evolving world of cloud-native computing, managing containerized
+applications in environments like Kubernetes has become increasingly complex.
+Organizations need robust tools that facilitate seamless deployment, version control,
+and collaboration between development teams. One such tool that has gained significant
+traction is ArgoCD, an open-source continuous delivery (CD) tool for Kubernetes.
+What is ArgoCD?
+ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes
+applications. It enables you to manage your application state by using Git repositories
+as the single source of truth. This approach ensures that the desired state of your
+environment is continuously reconciled with the actual state, reducing operational
+overhead and increasing deployment reliability.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/introduction-to-argocd/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/introduction-to-argocd/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Poulpix&#39;s Blog (Alt + H)">Poulpix&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Introduction to Argocd
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2025-03-09 10:50:22 +0100 CET'>March 9, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h3 id="introduction-to-argocd-your-kubernetes-application-deployment-orchestration-solution">Introduction to ArgoCD: Your Kubernetes Application Deployment Orchestration Solution<a hidden class="anchor" aria-hidden="true" href="#introduction-to-argocd-your-kubernetes-application-deployment-orchestration-solution">#</a></h3>
+<p>In the rapidly evolving world of cloud-native computing, managing containerized
+applications in environments like Kubernetes has become increasingly complex.
+Organizations need robust tools that facilitate seamless deployment, version control,
+and collaboration between development teams. One such tool that has gained significant
+traction is <strong>ArgoCD</strong>, an open-source continuous delivery (CD) tool for Kubernetes.</p>
+<h3 id="what-is-argocd">What is ArgoCD?<a hidden class="anchor" aria-hidden="true" href="#what-is-argocd">#</a></h3>
+<p>ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes
+applications. It enables you to manage your application state by using Git repositories
+as the single source of truth. This approach ensures that the desired state of your
+environment is continuously reconciled with the actual state, reducing operational
+overhead and increasing deployment reliability.</p>
+<h3 id="key-features-of-argocd">Key Features of ArgoCD<a hidden class="anchor" aria-hidden="true" href="#key-features-of-argocd">#</a></h3>
+<ol>
+<li>
+<p><strong>Declarative Application Management</strong>: ArgoCD allows you to define applications in
+a declarative manner using YAML manifests stored in Git repositories. This makes it
+easy to manage and audit changes to your application configurations.</p>
+</li>
+<li>
+<p><strong>Sync and Rollback Mechanisms</strong>: ArgoCD provides robust mechanisms for
+synchronizing desired states with actual states. If there are discrepancies, the tool
+automatically syncs the environments. Additionally, ArgoCD supports rollbacks, allowing
+teams to revert to previous stable versions quickly in case of issues.</p>
+</li>
+<li>
+<p><strong>GitOps Workflow</strong>: By using Git as the source of truth, ArgoCD facilitates a
+GitOps workflow. This means that all changes to your application are managed through
+pull requests and commits, ensuring consistency and traceability across environments.</p>
+</li>
+<li>
+<p><strong>Multi-Cluster Support</strong>: Argocd can manage applications across multiple Kubernetes
+clusters. This is particularly useful for organizations with complex multi-cloud or
+hybrid cloud architectures, enabling centralized management of deployments.</p>
+</li>
+<li>
+<p><strong>Automated Application Management</strong>: ArgoCD can automatically detect changes in the
+Git repository and trigger updates to the target cluster. This automation streamlines
+the deployment process and minimizes human intervention.</p>
+</li>
+</ol>
+<h3 id="getting-started-with-argocd">Getting Started with ArgoCD<a hidden class="anchor" aria-hidden="true" href="#getting-started-with-argocd">#</a></h3>
+<p>Setting up ArgoCD involves several steps:</p>
+<ol>
+<li>
+<p><strong>Installation</strong>: You can install ArgoCD using Helm charts or kubectl commands. For
+example, using Helm:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>helm repo add argo https://argoproj.github.io/argo-helm
+</span></span><span style="display:flex;"><span>helm repo update
+</span></span><span style="display:flex;"><span>helm install argocd argo/argo-cd
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Accessing the UI</strong>: After installation, you can access the ArgoCD user interface
+(UI) via a port-forward:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl port-forward svc/argocd-server -n argocd 8080:443
+</span></span></code></pre></div><p>The default admin password is stored in a Kubernetes secret. You can retrieve it
+using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl -n argocd get secret argocd-initial-admin-secret -o
+</span></span></code></pre></div></li>
+</ol>
+<p>jsonpath=&quot;{.data.password}&quot; | base64 -d</p>
+<pre tabindex="0"><code>
+3. **Adding Applications**: In the ArgoCD UI, you can add new applications by
+specifying the Git repository containing your Kubernetes manifests and the path to
+those manifests.
+
+### Conclusion
+
+ArgoCD is a powerful tool for managing Kubernetes applications with a focus on
+simplicity, automation, and consistency. Its integration with GitOps principles makes
+it an ideal choice for organizations looking to streamline their deployment processes
+and ensure reliable application delivery. Whether you&#39;re managing a single cluster or
+multiple clusters across different environments, ArgoCD offers a scalable solution that
+enhances collaboration and operational efficiency.
+
+As the Kubernetes ecosystem continues to evolve, tools like ArgoCD play a crucial role
+in helping teams achieve more efficient and reliable deployments. If you&#39;re looking to
+enhance your Kubernetes management practices, exploring ArgoCD could be a valuable step
+forward.
+</code></pre>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Poulpix&#39;s Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
