@@ -1,4 +1,4 @@
-baseURL: "http://blog.poulpix.fr/"
+baseURL: "https://blog.poulpix.fr/"
 languageCode: en-us
 title: Poulpix's Blog
 theme: hugo-PaperMod
