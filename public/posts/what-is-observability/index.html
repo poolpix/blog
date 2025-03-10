@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>What Is Observability | Poulpix&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="What is Observability?
+In the ever-evolving landscape of technology and Site Reliability Engineering (SRE), observability has emerged as a critical concept. But what exactly is observability, and why is it so important? Let&rsquo;s dive in.
+Understanding Observability
+Observability refers to the ability to understand the internal state of a system based on its external outputs. In the context of software systems, observability encompasses the practices and tools used to monitor, track, and analyze the performance and health of applications and infrastructure.">
+<meta name="author" content="">
+<link rel="canonical" href="https://blog.poulpix.fr/posts/what-is-observability/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://blog.poulpix.fr/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://blog.poulpix.fr/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.poulpix.fr/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://blog.poulpix.fr/apple-touch-icon.png">
+<link rel="mask-icon" href="https://blog.poulpix.fr/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://blog.poulpix.fr/posts/what-is-observability/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-9P0BJNQQ6S"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9P0BJNQQ6S');
+        }
+      </script><meta property="og:url" content="https://blog.poulpix.fr/posts/what-is-observability/">
+  <meta property="og:site_name" content="Poulpix&#39;s Blog">
+  <meta property="og:title" content="What Is Observability">
+  <meta property="og:description" content="What is Observability? In the ever-evolving landscape of technology and Site Reliability Engineering (SRE), observability has emerged as a critical concept. But what exactly is observability, and why is it so important? Let’s dive in.
+Understanding Observability Observability refers to the ability to understand the internal state of a system based on its external outputs. In the context of software systems, observability encompasses the practices and tools used to monitor, track, and analyze the performance and health of applications and infrastructure.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-09T15:12:03+01:00">
+    <meta property="article:modified_time" content="2025-03-09T15:12:03+01:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Is Observability">
+<meta name="twitter:description" content="What is Observability?
+In the ever-evolving landscape of technology and Site Reliability Engineering (SRE), observability has emerged as a critical concept. But what exactly is observability, and why is it so important? Let&rsquo;s dive in.
+Understanding Observability
+Observability refers to the ability to understand the internal state of a system based on its external outputs. In the context of software systems, observability encompasses the practices and tools used to monitor, track, and analyze the performance and health of applications and infrastructure.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://blog.poulpix.fr/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "What Is Observability",
+      "item": "https://blog.poulpix.fr/posts/what-is-observability/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Is Observability",
+  "name": "What Is Observability",
+  "description": "What is Observability? In the ever-evolving landscape of technology and Site Reliability Engineering (SRE), observability has emerged as a critical concept. But what exactly is observability, and why is it so important? Let\u0026rsquo;s dive in.\nUnderstanding Observability Observability refers to the ability to understand the internal state of a system based on its external outputs. In the context of software systems, observability encompasses the practices and tools used to monitor, track, and analyze the performance and health of applications and infrastructure.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "What is Observability? In the ever-evolving landscape of technology and Site Reliability Engineering (SRE), observability has emerged as a critical concept. But what exactly is observability, and why is it so important? Let’s dive in.\nUnderstanding Observability Observability refers to the ability to understand the internal state of a system based on its external outputs. In the context of software systems, observability encompasses the practices and tools used to monitor, track, and analyze the performance and health of applications and infrastructure.\nThe three pillars of observability are:\nLogs: Detailed records of events that occur within a system. Logs provide insights into what happened and when. Metrics: Numerical data points that measure various aspects of a system, such as CPU usage, memory consumption, and response times. Traces: Records of individual requests as they propagate through a system, helping to identify bottlenecks and understand the flow of data. Why Observability Matters In today’s complex and distributed systems, traditional monitoring approaches often fall short. Observability fills this gap by providing a holistic view of system behavior, enabling teams to:\nIdentify and Resolve Issues Faster: With comprehensive data at their fingertips, engineers can quickly pinpoint the root cause of problems and take corrective action. Improve System Reliability: By continuously monitoring and analyzing system performance, teams can proactively address potential issues before they impact users. Enhance Collaboration: Observability tools provide a common language and shared insights, fostering better collaboration between development, operations, and SRE teams. Drive Continuous Improvement: Detailed observability data enables data-driven decision-making, helping organizations optimize performance and drive innovation. Implementing Observability To effectively implement observability, organizations should consider the following best practices:\nAdopt Observability Tools: Leverage tools like Prometheus, Grafana, ELK Stack, and Jaeger to collect, store, and visualize observability data. Establish Clear Metrics: Define key performance indicators (KPIs) and service level objectives (SLOs) to measure system health and performance. Promote a Culture of Observability: Encourage a culture that values transparency, collaboration, and continuous learning. Automate Where Possible: Use automation to streamline data collection, analysis, and alerting processes. Conclusion Observability is not just a buzzword; it’s a fundamental practice for modern software engineering and SRE. By embracing observability, organizations can gain deeper insights into their systems, improve reliability, and drive continuous improvement. Whether you’re just getting started or looking to enhance your observability practices, the journey is well worth the effort.\nStay tuned for more insights into the world of observability and SRE!\nHappy monitoring! 🚀📈\n",
+  "wordCount" : "403",
+  "inLanguage": "en",
+  "datePublished": "2025-03-09T15:12:03+01:00",
+  "dateModified": "2025-03-09T15:12:03+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blog.poulpix.fr/posts/what-is-observability/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Poulpix's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://blog.poulpix.fr/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://blog.poulpix.fr/" accesskey="h" title="Poulpix&#39;s Blog (Alt + H)">Poulpix&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      What Is Observability
+    </h1>
+    <div class="post-meta"><span title='2025-03-09 15:12:03 +0100 CET'>March 9, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="what-is-observability">What is Observability?<a hidden class="anchor" aria-hidden="true" href="#what-is-observability">#</a></h1>
+<p>In the ever-evolving landscape of technology and Site Reliability Engineering (SRE), observability has emerged as a critical concept. But what exactly is observability, and why is it so important? Let&rsquo;s dive in.</p>
+<h2 id="understanding-observability">Understanding Observability<a hidden class="anchor" aria-hidden="true" href="#understanding-observability">#</a></h2>
+<p>Observability refers to the ability to understand the internal state of a system based on its external outputs. In the context of software systems, observability encompasses the practices and tools used to monitor, track, and analyze the performance and health of applications and infrastructure.</p>
+<p>The three pillars of observability are:</p>
+<ol>
+<li><strong>Logs</strong>: Detailed records of events that occur within a system. Logs provide insights into what happened and when.</li>
+<li><strong>Metrics</strong>: Numerical data points that measure various aspects of a system, such as CPU usage, memory consumption, and response times.</li>
+<li><strong>Traces</strong>: Records of individual requests as they propagate through a system, helping to identify bottlenecks and understand the flow of data.</li>
+</ol>
+<h2 id="why-observability-matters">Why Observability Matters<a hidden class="anchor" aria-hidden="true" href="#why-observability-matters">#</a></h2>
+<p>In today&rsquo;s complex and distributed systems, traditional monitoring approaches often fall short. Observability fills this gap by providing a holistic view of system behavior, enabling teams to:</p>
+<ul>
+<li><strong>Identify and Resolve Issues Faster</strong>: With comprehensive data at their fingertips, engineers can quickly pinpoint the root cause of problems and take corrective action.</li>
+<li><strong>Improve System Reliability</strong>: By continuously monitoring and analyzing system performance, teams can proactively address potential issues before they impact users.</li>
+<li><strong>Enhance Collaboration</strong>: Observability tools provide a common language and shared insights, fostering better collaboration between development, operations, and SRE teams.</li>
+<li><strong>Drive Continuous Improvement</strong>: Detailed observability data enables data-driven decision-making, helping organizations optimize performance and drive innovation.</li>
+</ul>
+<h2 id="implementing-observability">Implementing Observability<a hidden class="anchor" aria-hidden="true" href="#implementing-observability">#</a></h2>
+<p>To effectively implement observability, organizations should consider the following best practices:</p>
+<ul>
+<li><strong>Adopt Observability Tools</strong>: Leverage tools like Prometheus, Grafana, ELK Stack, and Jaeger to collect, store, and visualize observability data.</li>
+<li><strong>Establish Clear Metrics</strong>: Define key performance indicators (KPIs) and service level objectives (SLOs) to measure system health and performance.</li>
+<li><strong>Promote a Culture of Observability</strong>: Encourage a culture that values transparency, collaboration, and continuous learning.</li>
+<li><strong>Automate Where Possible</strong>: Use automation to streamline data collection, analysis, and alerting processes.</li>
+</ul>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>Observability is not just a buzzword; it&rsquo;s a fundamental practice for modern software engineering and SRE. By embracing observability, organizations can gain deeper insights into their systems, improve reliability, and drive continuous improvement. Whether you&rsquo;re just getting started or looking to enhance your observability practices, the journey is well worth the effort.</p>
+<p>Stay tuned for more insights into the world of observability and SRE!</p>
+<p><em>Happy monitoring!</em> 🚀📈</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://blog.poulpix.fr/">Poulpix&#39;s Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

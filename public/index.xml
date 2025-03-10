@@ -6,8 +6,18 @@
     <description>Recent content on Poulpix&#39;s Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Mar 2025 11:44:50 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 09 Mar 2025 15:12:03 +0100</lastBuildDate>
     <atom:link href="https://blog.poulpix.fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Observability</title>
+      <link>https://blog.poulpix.fr/posts/what-is-observability/</link>
+      <pubDate>Sun, 09 Mar 2025 15:12:03 +0100</pubDate>
+      <guid>https://blog.poulpix.fr/posts/what-is-observability/</guid>
+      <description>&lt;h1 id=&#34;what-is-observability&#34;&gt;What is Observability?&lt;/h1&gt;
+&lt;p&gt;In the ever-evolving landscape of technology and Site Reliability Engineering (SRE), observability has emerged as a critical concept. But what exactly is observability, and why is it so important? Let&amp;rsquo;s dive in.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-observability&#34;&gt;Understanding Observability&lt;/h2&gt;
+&lt;p&gt;Observability refers to the ability to understand the internal state of a system based on its external outputs. In the context of software systems, observability encompasses the practices and tools used to monitor, track, and analyze the performance and health of applications and infrastructure.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Terraform : Understanding state, state lock and backend</title>
       <link>https://blog.poulpix.fr/posts/terraform-state-and-backend/</link>
