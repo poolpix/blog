@@ -6,13 +6,13 @@ draft: false
 
 # Getting Started with GitLab CI: The Basics
 
-GitLab CI/CD is a powerful tool that helps automate your software development workflows. It integrates directly with GitLab repositories, making it easy to set up continuous integration and continuous deployment (CI/CD) pipelines.
+GitLab CI is a powerful tool that helps automate your software development workflows. It integrates directly with GitLab repositories, making it easy to set up continuous integration and continuous deployment (CI) pipelines.
 
-In this article, you'll learn the basics of GitLab CI/CD, including how to define and run a simple pipeline using `.gitlab-ci.yml`.
+In this article, you'll learn the basics of GitLab CI, including how to define and run a simple pipeline using `.gitlab-ci.yml`.
 
-## What is GitLab CI/CD?
+## What is GitLab CI?
 
-GitLab CI/CD automates the process of building, testing, and deploying code. It follows a pipeline-based approach where each change goes through multiple stages before being deployed to production.
+GitLab CI automates the process of building, testing, and deploying code. It follows a pipeline-based approach where each change goes through multiple stages before being deployed to production.
 
 Key concepts:
 - **Pipeline**: A set of jobs executed in a sequence or in parallel.
@@ -20,9 +20,9 @@ Key concepts:
 - **Stages**: Groups of jobs that run sequentially (e.g., `build`, `test`, `deploy`).
 - **Runners**: Compute instances that execute jobs.
 
-## Setting Up GitLab CI/CD
+## Setting Up GitLab CI
 
-To enable CI/CD in your GitLab repository, create a `.gitlab-ci.yml` file at the root of your project. This file defines the pipeline configuration.
+To enable CI in your GitLab repository, create a `.gitlab-ci.yml` file at the root of your project. This file defines the pipeline configuration.
 
 ### A Simple GitLab CI Pipeline
 
@@ -69,11 +69,11 @@ deploy-job:
 
 ## Running the Pipeline
 
-When you push your changes to GitLab, the pipeline automatically starts. You can check the status of your jobs under **CI/CD > Pipelines** in GitLab.
+When you push your changes to GitLab, the pipeline automatically starts. You can check the status of your jobs under **CI > Pipelines** in GitLab.
 
 ## Adding a Docker Runner
 
-To run CI/CD jobs, GitLab uses **runners**. If you're using GitLab SaaS, shared runners are available. For self-managed GitLab, install a runner:
+To run CI jobs, GitLab uses **runners**. If you're using GitLab SaaS, shared runners are available. For self-managed GitLab, install a runner:
 
 ```bash
 # Install GitLab Runner
@@ -86,4 +86,4 @@ sudo gitlab-runner register --url https://gitlab.com/ --registration-token YOUR_
 
 ## Conclusion
 
-GitLab CI/CD simplifies software development by automating build, test, and deployment workflows. With a basic `.gitlab-ci.yml`, you can set up a pipeline and ensure code quality. 
+GitLab CI simplifies software development by automating build, test, and deployment workflows. With a basic `.gitlab-ci.yml`, you can set up a pipeline and ensure code quality. 
